@@ -72,6 +72,10 @@
   .main {
     min-height: calc(100vh - 88px);
   }
+
+  .section {
+    padding: 32px 0;
+  }
 }
 
 @media screen and (min-width: $container-mw-lg) {
