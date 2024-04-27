@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+
+.list {
+    min-height: 116px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    border: 2px dashed $primary-color;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 24px 0;
+}
+  
+.item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+  
+.number {
+    color: $text-dark;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.56px;
+}
+  
+.title {
+    color: $secondary-color-light;
+    font-size: 14px;
+    line-height: 1.28;
+    letter-spacing: -2%;
+}
+
+@media screen and (min-width: $container-mw-sm) {
+    .number {
+        font-size: 32px;
+    }
+    .title {
+        max-width: 90px;
+    }
+}
+  

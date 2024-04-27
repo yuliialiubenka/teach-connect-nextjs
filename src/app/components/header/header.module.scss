@@ -1,0 +1,172 @@
+@import '../../styles/variables.scss';
+
+.header {
+  padding: 20px 0 0;
+}
+
+.container {
+  max-width: $container-mw-pg;
+  padding: $container-pg;
+  margin: $container-mg;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+  
+.wrapperLogo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+  
+.titleLogo {
+  color: $text-dark;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.imgLogo {
+  width: 24px;
+}
+  
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  // border-bottom: 2px dashed $primary-color;
+  border-top: 2px dashed $primary-color;
+  margin-left: -16px;
+  margin-right: -16px;
+
+  &Wrapper {
+    order: 3;
+    width: 100%;
+  }
+}
+  
+.navigate {
+  color: $text-dark;
+  font-size: 16px;
+  line-height: 1.25;
+  transition: color $transition;
+
+  &:hover, 
+  &:focus-visible {
+    color: $primary-color;
+  }
+
+  &.active {
+    color: $text-light
+  }
+}
+  
+.wrapperAuth {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+  
+.buttonLogin {
+  color: $text-dark;
+  font-family: $Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration-color: transparent;
+  transition: text-decoration $transition, text-decoration-color $transition;
+
+  & span {
+    display: inherit;
+    transition: color $transition;
+  }
+
+  &:hover,
+  &:focus-visible {
+    & span {
+      color: $primary-color;
+    }
+
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: $primary-color;
+  }
+}
+  
+.buttonRegister, .buttonLogout {
+  padding: 8px 12px;
+  max-width: 166px;
+  border: none;
+  border-radius: 12px;
+  background-color: $secondary-color;
+  transition: background-color $transition, color $transition;
+
+  color: $white;
+  font-family: $Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-color;
+    color: $text-dark;
+  }
+}
+
+@media screen and (min-width: $container-mw-sm) {
+  .titleLogo {
+    font-size: 20px;
+  }
+  .imgLogo {
+    width: 28px;
+  }
+
+  .wrapperLogo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .wrapperAuth {
+    gap: 16px;
+  }
+
+  .buttonLogin {
+    gap: 8px;
+    font-weight: 700;
+  }
+    
+  .buttonRegister, .buttonLogout {
+    padding: 10px 39px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: $container-mw-md) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .list {
+    border: 0;
+    margin: 0;
+
+    &Wrapper {
+      order: 0;
+      width: auto;
+    }
+  }
+}
+  

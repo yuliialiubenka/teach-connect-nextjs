@@ -1,0 +1,88 @@
+@import '../../../styles/variables';
+
+.details {
+  margin-top: 16px;
+
+  &[open] {
+    position: relative;
+    padding: 0 0 40px 0;
+
+    & ~ button {
+      display: block;
+    }
+
+    & .summary {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      &::before {
+        content: 'Hide info';
+      }
+    }
+  }
+}
+
+.summary {
+  list-style: none;
+  text-decoration: underline;
+  width: fit-content;
+  cursor: pointer;
+
+  &::before {
+    content: 'Read more';
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $primary-color;
+  }
+}
+  
+.reviewer {
+  &Experience {
+    color: $text-dark;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  &Item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &Wrapper {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  &Img {
+    border-radius: 100px;
+  }
+
+  &Name {
+    color: $text-light;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &Rating {
+    color: $text-dark;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.28;
+    display: flex;
+    align-items: center;
+  
+    & span {
+      display: flex;
+      color: $star;
+      margin-right: 8px;
+    }
+  }
+}
+  

@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.list {
+    flex-grow: 1;
+}
+
+.notFound {
+    margin: auto;
+    text-align: center;
+    color: $text-dark;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    &Text {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    & img {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.section {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5000;
+    height: 100vh;
+    background-color: $white;
+    overflow: hidden;
+    display: grid;
+    place-items: center center;
+}
+  
+.wrapper {
+    margin: 0 auto;
+    width: max-content;
+}
+  
+@keyframes image {
+    50% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+}
+  
+.image {
+    animation: 1s image infinite;
+}
+  
+.title {
+    color: $text-dark;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    margin-top: 10px;
+    text-align: center;
+}
+  

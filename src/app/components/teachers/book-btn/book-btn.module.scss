@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+
+.button {
+  display: none;
+  margin-top: 32px;
+  color: $text-dark;
+  font-family: $Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.55;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 12px;
+  background-color: $primary-color;
+  transition: background-color $transition;
+
+  &:hover, 
+  &:focus-visible {
+    background-color: $primary-color-active;
+  }
+}
+
+  

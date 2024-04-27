@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+
+.list {
+    flex-grow: 1;
+}
+
+.noTeachers {
+    max-width: fit-content;
+    margin: auto;
+
+    &Text {
+        max-width: 300px;
+        font-size: 16px;
+        color: $text-dark;
+        text-align: center;
+        font-weight: 500;
+        margin: auto;
+    }
+
+    &Img {
+        max-width: 100%;
+    }
+}

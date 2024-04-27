@@ -1,0 +1,87 @@
+@import '../../styles/variables';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+  
+.overlayBg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: $text-light;
+  opacity: 0.75;
+  transition: opacity $transition;
+}
+  
+.dialogPanel {
+  position: relative;
+  overflow: hidden;
+  background-color: $white;
+  border-radius: 14px;
+  padding: 32px 12px;
+  max-width: calc(100% - 32px);
+}
+
+.dialogWrap {
+  max-height: calc(100vh - 96px);
+  padding: 0 12px;
+  overflow-y: auto;
+  max-width: 536px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition: color $transition;
+  color: $text-dark;
+  &:hover,
+  &:focus-visible {
+    color: $primary-color;
+  }
+
+  & svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (min-width: $container-mw-sm) {
+  .dialogPanel {
+    max-width: 448px;
+    padding: 64px 32px;
+    border-radius: 30px;
+  }
+  
+  .dialogWrap {
+    max-height: calc(100vh - 180px);
+    padding: 0 32px;
+  }
+
+  .closeButton {
+    top: 20px;
+    right: 18px;
+  
+    & svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+@media screen and (min-width: $container-mw-md) {
+  .dialogPanel {
+    max-width: 600px;
+  }
+}

@@ -1,0 +1,89 @@
+@import "./variables";
+
+.main {
+  min-height: calc(100vh - 90px);
+  background-color: $page-bg;
+  display: flex;
+}
+
+.container {
+  max-width: $container-mw-pg;
+  padding: $container-pg;
+  margin: $container-mg;
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  height: 100%;
+}
+
+.authPage {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+
+  &Img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  & > div {
+    max-width: 500px;
+  }
+}
+
+.bookLessonPage {
+  align-items: center;
+
+  & > div {
+    max-width: 500px;
+  }
+}
+
+.notFoundPage {
+  align-items: center;
+  justify-content: center;
+
+  &Img {
+    max-width: 100%;
+  }
+}
+
+.info {
+  max-width: 300px;
+  font-size: 16px;
+  color: $text-dark;
+  text-align: center;
+  font-weight: 500;
+}
+
+.link {
+  &:hover,
+  &:focus-visible {
+    color: $primary-color;
+  }
+}
+
+@media screen and (min-width: $container-mw-md) {
+  .main {
+    min-height: calc(100vh - 88px);
+  }
+}
+
+@media screen and (min-width: $container-mw-lg) {
+  .authPage {
+    flex-direction: row;
+
+    &Img {
+      max-width: 56%;
+    }
+
+    & > div {
+      max-width: 100%;
+    }
+  }
+}

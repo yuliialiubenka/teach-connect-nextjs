@@ -1,0 +1,123 @@
+@import './normalize';
+@import './variables';
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  font-family: $Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $text-light;
+  border-radius: 20px;
+}
+
+fieldset {
+  border-width: 0;
+}
+
+p, h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black; /* Replace with your theme color */
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: $container-mw-xl;
+  padding: $container-pg;
+  margin: $container-mg;
+}
+
+.MuiPopover-root.MuiMenu-root > div {
+  margin-top: 4px;
+  border-radius: 12px;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  padding: 32px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 8px #8a8a895b;
+  max-width: calc(100vw - 32px);
+
+  &Text {
+    font-size: 16px;
+    color: $text-dark;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  &Img {
+    margin: auto;
+    max-width: calc(100vw - 96px);
+    height: auto;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+
+.like {
+  display: inline-flex;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: $text-dark;
+  transition: color $transition;
+  position: absolute;
+  top: -136px;
+  right: 0;
+
+  & svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $primary-color;
+  }
+}
+
+@media screen and (min-width: $container-mw-md) {
+  .like {
+    top: 0;
+  }
+}
