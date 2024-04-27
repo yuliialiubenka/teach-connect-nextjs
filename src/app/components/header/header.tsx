@@ -11,10 +11,7 @@ import { signOut } from 'firebase/auth';
 import { deleteToken } from '../../redux/sliceAuth';
 import styles from './header.module.scss';
 import Ukraine from '../../../../public/icons/ukraine.svg';
-
-interface User {
-    // Define your user properties here
-}
+import { User, RootState } from '@/typings';
 
 const Header = () => {
     const [user, setUser] = useState<User | null>(null);

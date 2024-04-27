@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { ref, onValue } from 'firebase/database';
 import { auth } from './firebase';
+import { RootState } from '@/typings';
 
 export const useFavorite = (database: any) => {
 

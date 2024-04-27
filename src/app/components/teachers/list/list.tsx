@@ -10,6 +10,7 @@ import StyledPagination from "../pagination/pagination";
 import Image from 'next/image';
 import img from '../../../../../public/images/searching-data.svg';
 import styles from "./list.module.scss";
+import { RootState } from '@/typings';
 
 const PAGE_SIZE = 4;
 

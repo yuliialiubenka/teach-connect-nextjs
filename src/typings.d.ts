@@ -98,3 +98,5 @@ export interface TextMaskCustomProps {
   placeholder?: string;
   [key: string]: any;
 }
+
+export interface User {}
